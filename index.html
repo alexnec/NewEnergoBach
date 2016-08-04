@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="">
+</head>
+<body>
+    <div id="togleButtonWrapper">
+      <button id="togleButton">Переключить вью</button>
+    </div>
+    <div id="id-view-container">
+    </div>
+    <script type="text/template" id="item-template1">
+        <div>
+          <ul id="customer-data">
+            <li><label><%- Id %></label></li>
+            <li><label><%- FIO %></label></li>
+            <li><label><%- Rating %></label></li>
+          </ul>
+        </div>
+    </script>
+    <script src="./js/src/jquery-3.1.0.js"></script>
+    <script src="./js/src/underscore.js"></script>
+    <script src="./js/src/backbone.js"></script>
+    <!--<script src="demo.js"></script>-->
+</body>
+</html>
