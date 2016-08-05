@@ -1,7 +1,7 @@
 var Customer = Backbone.Model.extend({
   defaults: {
-    "Id":  '',
-    "FIO":     '',
-    "Rating":    ''
+    "Id":  '1',
+    "FIO":  '2',
+    "Rating":  '3'
   }
 });

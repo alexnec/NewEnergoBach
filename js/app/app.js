@@ -1,5 +1,5 @@
-// js/app.js
-var app = app || {};
 $(function() {
-  new app.AppView();
+  var controller = new Router();
+
+  Backbone.history.start();
 });

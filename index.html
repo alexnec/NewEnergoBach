@@ -6,23 +6,41 @@
     <meta name="description" content="">
 </head>
 <body>
-    <div id="togleButtonWrapper">
-      <button id="togleButton">Переключить вью</button>
+    <div id="id-view-app">
     </div>
-    <div id="id-view-container">
-    </div>
-    <script type="text/template" id="item-template1">
+
+    <script type="text/template" id="AppTemplate">
         <div>
-          <ul id="customer-data">
-            <li><label><%- Id %></label></li>
-            <li><label><%- FIO %></label></li>
-            <li><label><%- Rating %></label></li>
-          </ul>
+          <div id="togleButtonWrapper">
+            <button id="toggleButton">Toggle view</button>
+          </div>
+          <label>Customer</label>
+          <div id="customer-view"></div>
+          <div id="customer-list"></div>
         </div>
     </script>
+
+    <script type="text/template" id="customer-template">
+      <ul id="customer-model">
+          <li>
+              <label><%- Id %></label>
+          </li>
+          <li>
+              <label><%- FIO %></label>
+          </li>
+          <li>
+              <label><%- Rating %></label>
+          </li>
+      </ul>
+    </script>
+
     <script src="./js/src/jquery-3.1.0.js"></script>
     <script src="./js/src/underscore.js"></script>
     <script src="./js/src/backbone.js"></script>
-    <!--<script src="demo.js"></script>-->
+    <script src="./js/app/models/customer.js"></script>
+    <script src="./js/app/views/CustomerView.js"></script>
+    <script src="./js/app/views/AppView.js"></script>
+    <script src="./js/app/router.js"></script>
+    <script src="./js/app/app.js"></script>
 </body>
 </html>

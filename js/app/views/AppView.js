@@ -1,18 +1,35 @@
-var app = app || {};
-
-app.AppView = Backbone.View.extend({
-  el: '#id-view-container',
-  statsTemplate: _.template( $('#item-template1').html() ),
+AppView = Backbone.View.extend({
+  template: _.template($('#AppTemplate').html()),
+  el: "#id-view-app",
+  events: {
+      "click #toggleButton": "ToggleView",
+  },
   initialize: function() {
-    this.listenTo(app.Todos, 'add', this.addOne);
-    this.listenTo(app.Todos, 'reset', this.addAll);
+    this.render();
   },
-  showView1: function( todo ) {
-    var view = new app.TodoView({ model: todo });
-    $('#todo-list').append( view.render().el );
+  render: function() {
+    this.$el.html(this.template());
+
+    var cusModel = new Customer();
+    this.cusView = new CustomerView({
+      model: cusModel
+    });
+
+    var cusModel1 = new Customer({
+      Id: 123,
+      FIO: "Test Fio",
+      Rating: 111
+    });
+    this.cusView1 = new CustomerView({
+      model: cusModel1
+    });
+
+    $('#customer-view', this.el).append(this.cusView.render().el);
+    $('#customer-view', this.el).append(this.cusView1.render().el);
+    this.cusView1.toggle();
   },
-  showView2: function() {
-    this.$('#todo-list').html('');
-    app.Todos.each(this.addOne, this);
+  ToggleView: function() {
+    this.cusView.toggle();
+    this.cusView1.toggle();
   }
 });
