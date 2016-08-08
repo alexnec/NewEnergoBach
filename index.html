@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Title</title>
     <meta name="description" content="">
+    <link rel="stylesheet" href="./css/site.css"/>
 </head>
 <body>
     <div id="id-view-app">
@@ -16,7 +17,7 @@
           </div>
           <label>Customer</label>
           <div id="customer-view"></div>
-          <div id="customer-list"></div>
+          <ul id="customer-list"></ul>
         </div>
     </script>
 
@@ -34,10 +35,26 @@
       </ul>
     </script>
 
+    <script type="text/template" id="customer-list-template">
+          <li>
+              <span>Id</span><span>FIO</span><span>Rating</span>
+          </li>
+    </script>
+
+    <script type="text/template" id="customer-item-template">
+          <li>
+              <span><%- Id %></span><span><%- FIO %></span><span><%- Rating %></span>
+          </li>
+    </script>
+
     <script src="./js/src/jquery-3.1.0.js"></script>
     <script src="./js/src/underscore.js"></script>
     <script src="./js/src/backbone.js"></script>
     <script src="./js/app/models/customer.js"></script>
+    <script src="./js/app/collections/Customers.js"></script>
+    <script src="./js/app/components/DataService.js"></script>
+    <script src="./js/app/views/CustomerListView.js"></script>
+    <script src="./js/app/views/CustomerItemView.js"></script>
     <script src="./js/app/views/CustomerView.js"></script>
     <script src="./js/app/views/AppView.js"></script>
     <script src="./js/app/router.js"></script>
