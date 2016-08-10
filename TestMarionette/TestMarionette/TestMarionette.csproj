@@ -75,7 +75,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="js\app\app.js" />
+    <Content Include="js\app\collections\Customers.js" />
+    <Content Include="js\app\components\dataService.js" />
+    <Content Include="js\app\componetnts\dataService.js" />
+    <Content Include="js\app\models\customer.js" />
+    <Content Include="js\app\router.js" />
+    <Content Include="js\app\views\AppView.js" />
+    <Content Include="js\app\views\CustomerItemView.js" />
+    <Content Include="js\app\views\CustomerListView.js" />
+    <Content Include="js\app\views\CustomerView.js" />
+    <Content Include="js\src\backbone.js" />
+    <Content Include="js\src\backbone.marionette.js" />
+    <Content Include="js\src\jquery-3.1.0.js" />
+    <Content Include="js\src\json2.js" />
+    <Content Include="js\src\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -84,18 +101,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\MicrosoftAjax.js" />
-    <Content Include="Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Account\ChangePassword.aspx" />
     <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
     <Content Include="Views\Account\LogOn.aspx" />
