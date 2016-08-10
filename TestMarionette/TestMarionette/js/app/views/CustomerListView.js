@@ -1,22 +1,11 @@
-var CustomerListView = Backbone.View.extend({
-  template: _.template($('#customer-list-template').html()),
-  initialize: function() {
-    this.customerList = DataService.getData();
-    this.render();
-  },
-  render: function () {
-      this.$el.html(this.template());
+//    this.customerList = DataService.getData();
+var CusApp = CusApp || {};
 
-      _.each(this.customerList.models, function (item) {
-        var itemView = new CustomerItemView({
-          model: item
-        });
-        this.$el.append(itemView.render().el);
-      }, this);
+(function () {
 
-      return this;
-  },
-  toggle: function() {
-      this.$el.toggle();
-  }
+CusApp.ListView = Backbone.Marionette.CompositeView.extend({
+    template: '#customer-list-template',
+    childView: CusApp.TodoView,
+    childViewContainer: '#customer-list'
 });
+})();

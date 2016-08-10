@@ -78,13 +78,12 @@
     <Content Include="css\site.css" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="js\app\app.js" />
+    <Content Include="js\app\CusApp.App.js" />
     <Content Include="js\app\collections\Customers.js" />
     <Content Include="js\app\components\dataService.js" />
-    <Content Include="js\app\componetnts\dataService.js" />
     <Content Include="js\app\models\customer.js" />
-    <Content Include="js\app\router.js" />
-    <Content Include="js\app\views\AppView.js" />
+    <Content Include="js\app\CusApp.js" />
+    <Content Include="js\app\views\RootLayout .js" />
     <Content Include="js\app\views\CustomerItemView.js" />
     <Content Include="js\app\views\CustomerListView.js" />
     <Content Include="js\app\views\CustomerView.js" />

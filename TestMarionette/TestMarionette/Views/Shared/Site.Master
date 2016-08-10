@@ -43,7 +43,6 @@
           </div>
           <label>Customer</label>
           <div id="customer-view"></div>
-          <ul id="customer-list"></ul>
         </div>
     </script>
 
@@ -62,9 +61,8 @@
     </script>
 
     <script type="text/template" id="customer-list-template">
-          <li>
-              <span>Id</span><span>FIO</span><span>Rating</span>
-          </li>
+          <span>Id</span><span>FIO</span><span>Rating</span>
+          <ul id="customer-list"></ul>
     </script>
 
     <script type="text/template" id="customer-item-template">
@@ -72,18 +70,23 @@
               <span>{%=Id%}</span><span>{%=FIO %}</span><span>{%=Rating %}</span>
           </li>
     </script>
-
+    
     <script src="../../js/src/jquery-3.1.0.js"></script>
     <script src="../../js/src/underscore.js"></script>
     <script src="../../js/src/backbone.js"></script>
-    <script src="../../js/app/models/customer.js"></script>
-    <script src="../../js/app/collections/Customers.js"></script>
+    <script src="../../js/src/backbone.js"></script>
+    <script src="../../js/src/backbone.marionette.js"></script>
+<%--    <script src="../../js/app/collections/Customers.js"></script>
     <script src="../../js/app/components/DataService.js"></script>
     <script src="../../js/app/views/CustomerListView.js"></script>
     <script src="../../js/app/views/CustomerItemView.js"></script>
     <script src="../../js/app/views/CustomerView.js"></script>
     <script src="../../js/app/views/AppView.js"></script>
-    <script src="../../js/app/router.js"></script>
-    <script src="../../js/app/app.js"></script>
+    <script src="../../js/app/router.js"></script>--%>
+    <script type="text/javascript" src="../../js/app/CusApp.App.js"></script>
+    <script type="text/javascript" src="../../js/app/views/CustomerItemView.js"></script>
+    <script type="text/javascript" src="../../js/app/views/CustomerView.js"></script>
+    <script type="text/javascript" src="../../js/app/views/RootLayout.js"></script>
+    <script type="text/javascript" src="../../js/app/CusApp.js"></script>
 </body>
 </html>
