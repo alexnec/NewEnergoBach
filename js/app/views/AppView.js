@@ -6,6 +6,8 @@ AppView = Backbone.View.extend({
   },
   initialize: function() {
     //_.bindAll(this, 'render');
+    //default model
+    app.selectedModel = new Customer();
     this.cusView = new CustomerView();
     this.cusListView = new CustomerListView();
 
