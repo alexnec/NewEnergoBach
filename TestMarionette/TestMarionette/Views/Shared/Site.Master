@@ -40,6 +40,8 @@
         <div>
           <div id="togleButtonWrapper">
             <button id="toggleButton">Toggle view</button>
+            <a id="toggleHrefView" href="#customerView">Customer view</a>
+            <a id="toggleHrefList" href="#customerListView">Customers list view</a>
           </div>
           <label>Customer</label>
           <div id="customer-view"></div>
@@ -81,6 +83,7 @@
     <script type="text/javascript" src="../../js/app/collections/Customers.js"></script>
     <script type="text/javascript" src="../../js/app/components/DataService.js"></script>
     <script type="text/javascript" src="../../js/app/views/CustomerItemView.js"></script>
+    <script type="text/javascript" src="../../js/app/views/CustomerListView.js"></script>
     <script type="text/javascript" src="../../js/app/views/CustomerView.js"></script>
     <script type="text/javascript" src="../../js/app/views/RootLayout.js"></script>
     <script type="text/javascript" src="../../js/app/CusApp.Router.js"></script>

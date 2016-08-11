@@ -3,7 +3,8 @@
 (function () {
     CusApp.Router = Backbone.Marionette.AppRouter.extend({
         appRoutes: {
-            'toggle': 'toggleView'
+            'customerView': 'customerView',
+            'customerListView': 'customerListView'
         }
     });
 
@@ -15,10 +16,29 @@
             this.showRootLayout(this.cusList);
         },
         showRootLayout: function (cusList) {
-            var header = new CusApp.RootLayout();
+            CusApp.App.root.render();
+
+            this.showCusView();
         },
-        toggleView: function() {
-            alert("To to to TO! Toggle")
+        showCusView: function () {
+            var cus = new CusApp.Customer();
+            var customerView = new CusApp.CustomerView({
+                model: cus
+            });
+            CusApp.App.root.showChildView('customerView', customerView);
+        },
+        customerView: function() {
+            this.showCusView();
+        },
+        customerListView: function() {
+            this.showCusListView();
+        },
+        showCusListView: function () {
+            var customerListView = new CusApp.CustomerListView({
+                collection: this.cusList
+            });
+
+            CusApp.App.root.showChildView('customerView', customerListView);
         }
     });
 })();

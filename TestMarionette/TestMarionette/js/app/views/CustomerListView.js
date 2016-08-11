@@ -3,9 +3,9 @@ var CusApp = CusApp || {};
 
 (function () {
 
-CusApp.ListView = Backbone.Marionette.CompositeView.extend({
+CusApp.CustomerListView = Backbone.Marionette.CompositeView.extend({
     template: '#customer-list-template',
-    childView: CusApp.TodoView,
+    childView: CusApp.CustomerItemView,
     childViewContainer: '#customer-list'
 });
 })();
