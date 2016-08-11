@@ -1,6 +1,8 @@
 ﻿var CusApp = CusApp || {};
 
 (function () {
+    CusApp.CallbackToggleView = new Backbone.Marionette.Callbacks();
+
     CusApp.Router = Backbone.Marionette.AppRouter.extend({
         appRoutes: {
             'customerView': 'customerView',
@@ -8,9 +10,10 @@
         }
     });
 
-    CusApp.Controller = Backbone.Marionette.Object.extend({
+    CusApp.Controller = Marionette.Controller.extend({
         initialize: function () {
             this.cusList = CusApp.DataService.getData();
+            CusApp.CallbackToggleView.add(this.showCusView, this);
         },
         start: function () {
             this.showRootLayout(this.cusList);
@@ -20,18 +23,20 @@
 
             this.showCusView();
         },
+        customerView: function() {
+            this.showCusView();
+        },
+        customerListView: function() {
+            this.showCusListView();
+        },
         showCusView: function () {
             var cus = new CusApp.Customer();
             var customerView = new CusApp.CustomerView({
                 model: cus
             });
             CusApp.App.root.showChildView('customerView', customerView);
-        },
-        customerView: function() {
-            this.showCusView();
-        },
-        customerListView: function() {
-            this.showCusListView();
+
+            this.toggleFlagView = "CusView";
         },
         showCusListView: function () {
             var customerListView = new CusApp.CustomerListView({
@@ -39,6 +44,16 @@
             });
 
             CusApp.App.root.showChildView('customerView', customerListView);
+
+            this.toggleFlagView = "CusListView";
+        },
+        toggleView: function () {
+            if (this.toggleFlagView === "CusListView") {
+                this.showCusView();
+            }
+            else if (this.toggleFlagView === "CusView") {
+                this.showCusListView();
+            }
         }
     });
 })();

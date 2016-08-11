@@ -11,7 +11,7 @@ var CusApp = CusApp || {};
             customerView: '#customer-view'
         },
         toggleView: function () {
-            alert("!");
+            CusApp.CallbackToggleView.run();
         }
     });
 })();

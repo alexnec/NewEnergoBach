@@ -81,9 +81,10 @@
     <Content Include="js\app\CusApp.App.js" />
     <Content Include="js\app\collections\Customers.js" />
     <Content Include="js\app\components\dataService.js" />
+    <Content Include="js\app\CusApp.Router.js" />
     <Content Include="js\app\models\customer.js" />
     <Content Include="js\app\CusApp.js" />
-    <Content Include="js\app\views\RootLayout .js" />
+    <Content Include="js\app\views\RootLayout.js" />
     <Content Include="js\app\views\CustomerItemView.js" />
     <Content Include="js\app\views\CustomerListView.js" />
     <Content Include="js\app\views\CustomerView.js" />
