@@ -3,22 +3,22 @@
 (function () {
     CusApp.Router = Backbone.Marionette.AppRouter.extend({
         appRoutes: {
-            'qwe': 'ss'
+            'toggle': 'toggleView'
         }
     });
 
     CusApp.Controller = Backbone.Marionette.Object.extend({
         initialize: function () {
-            this.cusList = new CusApp.cusList();
+            this.cusList = CusApp.DataService.getData();
         },
         start: function () {
             this.showRootLayout(this.cusList);
         },
         showRootLayout: function (cusList) {
-            var header = new CusApp.RootLayout({
-                collection: cusList
-            });
-            CusApp.App.root.showChildView('header', header);
+            var header = new CusApp.RootLayout();
+        },
+        toggleView: function() {
+            alert("To to to TO! Toggle")
         }
     });
 })();
