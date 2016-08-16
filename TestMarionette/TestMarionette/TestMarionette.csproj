@@ -92,6 +92,7 @@
     <Content Include="js\src\backbone.marionette.js" />
     <Content Include="js\src\jquery-3.1.0.js" />
     <Content Include="js\src\json2.js" />
+    <Content Include="js\src\require.min.js" />
     <Content Include="js\src\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

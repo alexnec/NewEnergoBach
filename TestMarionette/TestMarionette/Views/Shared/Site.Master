@@ -3,6 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+      <script>
+          var App = window.App || {};
+      </script>
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
@@ -78,7 +81,8 @@
     <script src="../../js/src/backbone.js"></script>
     <script src="../../js/src/backbone.js"></script>
     <script src="../../js/src/backbone.marionette.js"></script>
-    <script type="text/javascript" src="../../js/app/CusApp.App.js"></script>
+    <script type="text/javascript" src="../../js/src/require.min.js"></script>
+<%--    <script type="text/javascript" src="../../js/app/CusApp.App.js"></script>
     <script type="text/javascript" src="../../js/app/models/Customer.js"></script>
     <script type="text/javascript" src="../../js/app/collections/Customers.js"></script>
     <script type="text/javascript" src="../../js/app/components/DataService.js"></script>
@@ -86,7 +90,7 @@
     <script type="text/javascript" src="../../js/app/views/CustomerListView.js"></script>
     <script type="text/javascript" src="../../js/app/views/CustomerView.js"></script>
     <script type="text/javascript" src="../../js/app/views/RootLayout.js"></script>
-    <script type="text/javascript" src="../../js/app/CusApp.Router.js"></script>
+    <script type="text/javascript" src="../../js/app/CusApp.Router.js"></script>--%>
     <script type="text/javascript" src="../../js/app/CusApp.js"></script>
 </body>
 </html>
